@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Padala</title>
+  <meta name="description" content="Send project folders to your team, encrypted. Chat per project, and send only what changed.">
+  <meta name="theme-color" content="#0a0e0d">
+  <meta name="color-scheme" content="dark">
+  <meta name="darkreader-lock">
+  <meta name="application-name" content="Padala">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Padala">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="icon" href="/favicon.ico" sizes="48x48">
+  <link rel="icon" href="/icons/icon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/icons/icon-192.png" sizes="192x192" type="image/png">
+  <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
+  <link rel="preload" as="font" type="font/woff2" href="/fonts/Inter.woff2" crossorigin>
+  <script src="/js/theme.js"></script>
+  <link rel="stylesheet" href="/css/app.css">
+  <link rel="preload" as="image" href="/icons/icon-192.png">
+  <link rel="preload" as="image" href="/img/dala/dash.webp">
+  <link rel="preload" as="image" href="/img/dala/hello.webp">
+  <link rel="preload" as="image" href="/img/dala/point.webp">
+  <link rel="preload" as="image" href="/img/dala/thumbs.webp">
+  <script type="module" src="/js/app.js"></script>
+  <!-- load every module in parallel instead of one import after another -->
+  <link rel="modulepreload" href="/js/api.js">
+  <link rel="modulepreload" href="/js/app/auth.js">
+  <link rel="modulepreload" href="/js/app/chat.js">
+  <link rel="modulepreload" href="/js/app/home.js">
+  <link rel="modulepreload" href="/js/app/install.js">
+  <link rel="modulepreload" href="/js/app/keys.js">
+  <link rel="modulepreload" href="/js/app/live.js">
+  <link rel="modulepreload" href="/js/app/progress.js">
+  <link rel="modulepreload" href="/js/app/push.js">
+  <link rel="modulepreload" href="/js/app/receive.js">
+  <link rel="modulepreload" href="/js/app/send.js">
+  <link rel="modulepreload" href="/js/app/settings.js">
+  <link rel="modulepreload" href="/js/app/shell.js">
+  <link rel="modulepreload" href="/js/app/state.js">
+  <link rel="modulepreload" href="/js/app/team.js">
+  <link rel="modulepreload" href="/js/app/touch.js">
+  <link rel="modulepreload" href="/js/checkup.js">
+  <link rel="modulepreload" href="/js/crypto.js">
+  <link rel="modulepreload" href="/js/dala.js">
+  <link rel="modulepreload" href="/js/folders.js">
+  <link rel="modulepreload" href="/js/i18n.js">
+  <link rel="modulepreload" href="/js/keyring.js">
+  <link rel="modulepreload" href="/js/preview.js">
+  <link rel="modulepreload" href="/js/qr.js">
+  <link rel="modulepreload" href="/js/splash.js">
+  <link rel="modulepreload" href="/js/sync.js">
+  <link rel="modulepreload" href="/js/transfer.js">
+  <link rel="modulepreload" href="/js/ui.js">
+  <link rel="modulepreload" href="/js/zip.js">
+</head>
+<body>
+  <!-- Opening screen: shown right away while the app loads, then animated by js/splash.js -->
+  <div id="splash" class="splash" aria-hidden="true">
+    <div class="splash-glow"></div>
+    <div class="splash-stage">
+      <div class="splash-brand">
+        <div class="splash-logo"><span class="splash-ring"></span><span class="splash-ring splash-ring--2"></span><img src="/icons/icon-192.png" alt=""></div>
+        <div class="splash-word"><span>P</span><span>a</span><span>d</span><span>a</span><span>l</span><span>a</span></div>
+        <div class="splash-tag">Project delivery for teams</div>
+      </div>
+      <div class="splash-dala"><div class="splash-bubble" aria-live="polite"></div><img src="/img/dala/dash.webp" alt=""><span class="splash-floor"></span></div>
+      <div class="splash-actions" hidden>
+        <button class="btn btn--primary btn--big" type="button" data-splash="next">Next</button>
+        <button class="btn btn--primary btn--big" type="button" data-splash="signup" hidden>Create an account</button>
+        <button class="btn btn--big splash-alt" type="button" data-splash="signin" hidden>I already have an account</button>
+      </div>
+      <div class="splash-dots" hidden><i></i><i></i><i></i></div>
+    </div>
+    <div class="splash-bar"><i></i></div>
+  </div>
+  <div id="app"></div>
+  <noscript><p style="padding:24px;font-family:sans-serif">Padala needs JavaScript to encrypt your files on this device.</p></noscript>
+</body>
+</html>

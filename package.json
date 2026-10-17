@@ -1,0 +1,19 @@
+{
+  "name": "padala",
+  "version": "1.0.0",
+  "description": "Encrypted project delivery for small web-dev teams: send folders, chat per project, and send only what changed.",
+  "type": "module",
+  "private": true,
+  "license": "MIT",
+  "author": "Mukramin Bariwa Ansao",
+  "engines": {
+    "node": ">=22.13"
+  },
+  "scripts": {
+    "start": "node --disable-warning=ExperimentalWarning server/index.js",
+    "share": "node --disable-warning=ExperimentalWarning tools/share.js",
+    "test": "node --disable-warning=ExperimentalWarning --test tests/*.test.js",
+    "backup": "node --disable-warning=ExperimentalWarning tools/backup.js",
+    "check": "node tools/check.js"
+  }
+}

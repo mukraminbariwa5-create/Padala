@@ -1,0 +1,10 @@
+data/
+node_modules/
+*.db
+*.db-wal
+*.db-shm
+.DS_Store
+Thumbs.db
+__pycache__/
+.tools/
+backups/

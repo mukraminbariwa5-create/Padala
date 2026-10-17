@@ -1,0 +1,3 @@
+# Padala runs on Node.js (npm start), not Apache.
+# If this folder sits inside a web server folder (like XAMPP htdocs), never serve its files or data directly.
+Require all denied
