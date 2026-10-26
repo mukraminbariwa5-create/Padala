@@ -5,6 +5,8 @@
 ![No dependencies](https://img.shields.io/badge/dependencies-0-15803d)
 ![License: MIT](https://img.shields.io/badge/license-MIT-blue)
 
+**[Live demo](https://padala-demo.onrender.com)** · create a test account with any username (free hosting: the first visit can take about a minute to wake up).
+
 **Encrypted project delivery for small web-dev teams.** Send a whole project folder to your partner, chat about it in the same place, and when you fix something, send **only the files that changed**. The receiver's folder is updated in place, and their own edits are never silently overwritten.
 
 I built it for a real problem: I build websites in Manila, my partner hands them over to clients in Jolo, Sulu, and the signal there is weak. Messenger can't send folders, Drive links pile up, and every small fix meant re-sending the whole project.
