@@ -3,7 +3,7 @@ import { mountDala, skipWelcome, holdDala } from './dala.js';
 import { startI18n } from './i18n.js';
 import { runIntro } from './splash.js';
 import { esc, enhanceFields } from './ui.js';
-import { afterSignIn } from './app/auth.js';
+import { afterSignIn, showDemoNote } from './app/auth.js';
 import { markRead } from './app/live.js';
 import { subscribePush } from './app/push.js';
 import { current, route, showError, skeletonHtml, authLayout, layout } from './app/shell.js';
@@ -21,7 +21,7 @@ async function boot() {
   enhanceFields();
   layout(skeletonHtml('home', 'Opening Padala…'), { sidebar: false });
   // The opening animation plays while Padala signs in underneath; Dala greets by name when it can.
-  api.get('/api/config').then((c) => { S.publicUrl = c.publicUrl; }).catch(() => {});
+  api.get('/api/config').then((c) => { S.publicUrl = c.publicUrl; S.publicDemo = !!c.publicDemo; showDemoNote(); }).catch(() => {});
   const signedIn = afterSignIn().then(() => null, (err) => err);
   const intro = runIntro({ who: signedIn.then((err) => (err ? null : S.me)), invite: location.hash.startsWith('#/join/') });
   const err = await signedIn;

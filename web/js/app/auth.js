@@ -55,6 +55,14 @@ export function screenForgot() {
   });
 }
 
+/** On the public portfolio demo, say so on the sign-in screen: it's shared and gets erased. */
+export function showDemoNote() {
+  if (!S.publicDemo) return;
+  const form = app.querySelector('.tabs + form');
+  if (!form || app.querySelector('.demo-note')) return;
+  form.insertAdjacentHTML('beforebegin', '<p class="hint demo-note" role="note" style="padding:10px 12px;border-radius:10px;background:var(--pd-surface-3, rgba(127,127,127,.12))"><b>Public demo.</b> Create a test account with any username to try Padala. Everything here is erased whenever the demo restarts, so don’t upload real files or reuse a real password.</p>');
+}
+
 export function screenAuth(mode, { invite } = {}) {
   const up = mode === 'signup';
   authLayout(`
@@ -76,6 +84,7 @@ export function screenAuth(mode, { invite } = {}) {
         <button class="btn btn--primary btn--big btn--block" type="submit">${up ? 'Create account' : 'Sign in'} ${icon.send({ size: 18, width: 2.4 })}</button>
       </form>
       <p class="hint" style="display:flex;gap:8px;align-items:center">${icon.lock({ size: 14 })} Files and messages are encrypted on your device before they’re sent.</p>`);
+  showDemoNote();
   const tabs = app.querySelector('.tabs');
   app.querySelectorAll('[data-mode]').forEach((a) => a.addEventListener('click', (e) => {
     e.preventDefault();

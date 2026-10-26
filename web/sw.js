@@ -1,7 +1,7 @@
 // Service worker: lets Padala install like an app and open without signal.
 // Network first (always the newest version), falling back to the saved copy when offline.
 // API calls are never cached: they carry private, encrypted data.
-const CACHE = 'padala-shell-v23';
+const CACHE = 'padala-shell-v24';
 const SHELL = [
   '/', '/css/app.css', '/manifest.webmanifest', '/icons/icon-32.png', '/icons/icon-64.png', '/icons/icon-192.png',
   '/js/app.js', '/js/app/auth.js', '/js/app/chat.js', '/js/app/home.js', '/js/app/install.js', '/js/app/keys.js', '/js/app/live.js', '/js/app/progress.js', '/js/app/push.js', '/js/app/receive.js', '/js/app/send.js', '/js/app/settings.js', '/js/app/shell.js', '/js/app/state.js', '/js/app/team.js', '/js/app/touch.js', '/js/api.js', '/js/crypto.js', '/js/transfer.js', '/js/sync.js', '/js/zip.js', '/js/folders.js', '/js/ui.js', '/js/dala.js', '/js/preview.js', '/js/checkup.js', '/js/splash.js', '/js/qr.js', '/js/keyring.js', '/js/theme.js', '/js/i18n.js', '/js/lang/fil.js', '/fonts/Inter.woff2', '/fonts/JetBrainsMono-Medium.woff2', '/fonts/JetBrainsMono-Bold.woff2',

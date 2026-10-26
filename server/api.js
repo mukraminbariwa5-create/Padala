@@ -114,7 +114,7 @@ export function buildApi({ db, store, hub, config, vapid }) {
   // ---------- accounts ----------
   r.get('/api/health', () => ({ ok: true }));
   // The address other devices should use (set by `npm run share` or PUBLIC_URL when hosted).
-  r.get('/api/config', () => ({ publicUrl: config.publicUrl || null }));
+  r.get('/api/config', () => ({ publicUrl: config.publicUrl || null, publicDemo: !!config.publicDemo }));
 
   r.post('/api/signup', async (ctx) => {
     const b = await readJson(ctx.req);

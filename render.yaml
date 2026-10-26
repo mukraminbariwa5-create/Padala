@@ -1,0 +1,29 @@
+# Render Blueprint for the Padala public demo (free plan).
+# Free web services sleep after 15 minutes without visitors and their disk is wiped on every
+# restart, so the demo starts empty each time. PUBLIC_DEMO shows a note on the sign-in screen.
+services:
+  - type: web
+    name: padala-demo
+    runtime: node
+    plan: free
+    buildCommand: npm run check
+    startCommand: npm start
+    healthCheckPath: /api/health
+    autoDeploy: true
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
+      - key: PUBLIC_DEMO
+        value: "1"
+      - key: COOKIE_SECURE
+        value: "1"
+      - key: TRUST_PROXY
+        value: "1"
+      - key: BACKUPS
+        value: "off"
+      - key: MAX_FILE_MB
+        value: "10"
+      - key: MAX_TEAM_STORAGE_MB
+        value: "50"
+      - key: PUBLIC_URL
+        value: https://padala-demo.onrender.com

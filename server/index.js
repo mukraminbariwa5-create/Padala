@@ -43,6 +43,7 @@ export function loadConfig(env = process.env) {
     maxTeamStorageMB: Number(env.MAX_TEAM_STORAGE_MB || 20480),
     backupDir: path.resolve(env.BACKUP_DIR || path.join(ROOT, 'backups')), // daily backups (use another drive if you can)
     backups: env.BACKUPS !== 'off',
+    publicDemo: env.PUBLIC_DEMO === '1', // shows a note on the sign-in screen: shared demo, data is erased
   };
 }
 

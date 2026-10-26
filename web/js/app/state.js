@@ -10,7 +10,7 @@ export const STATUS_ORDER = ['building', 'sent', 'handed_over', 'paid'];
 export const S = {
   me: null, teams: [], team: null, keys: null, keyMissing: false,
   projects: [], online: new Set(), projectData: new Map(), texts: new Map(),
-  events: null, live: false, busy: null, drafts: {}, replyTo: {}, announced: new Set(), teamUnread: {}, nudged: new Set(), versions: new Map(), enter: true, publicUrl: null, backupKey: null, backupOn: false, keySalt: null, hasRecovery: true, connectedOnce: false, sideFilter: '', projFilter: 'all', projQuery: '',
+  events: null, live: false, busy: null, drafts: {}, replyTo: {}, announced: new Set(), teamUnread: {}, nudged: new Set(), versions: new Map(), enter: true, publicUrl: null, publicDemo: false, backupKey: null, backupOn: false, keySalt: null, hasRecovery: true, connectedOnce: false, sideFilter: '', projFilter: 'all', projQuery: '',
 };
 
 // Files the person chose to leave out of a project stay left out next time (per device).
